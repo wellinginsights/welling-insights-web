@@ -3,242 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Welling Insights | Technical Project Management Mentorship</title>
-    <meta name="description" content="A 4-week Technical Project Manager internship bridging Construction, Cyber Security, and Tech. Mentorship by industry veterans to help you break the $100k salary mark.">
-    <meta name="keywords" content="TPM, Project Management, Internship, Cyber Security, Construction Tech, Mentorship">
-    <meta property="og:title" content="Welling Insights Mentorship">
-    <meta property="og:description" content="Bridging the gap between Construction and Tech. Secure your spot in the 4-week sprint.">
-    
+    <title>Welling Insights | Construction & Cyber Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
     <style>
         /* --- COLOR PALETTE --- */
         :root {
-            --primary-blue: #044973;       /* Bank Blue */
-            --deep-navy: #032130;          /* Dark Backgrounds */
-            --electric-cyan: #00aae3;      /* Buttons/Accents */
-            --text-dark: #3d3d3d;          /* Body Text */
-            --text-light: #ffffff;         /* White Text */
-            --pure-black: #000000;
+            --primary-blue: #044973;
+            --deep-navy: #032130;
+            --electric-cyan: #00aae3;
+            --text-dark: #3d3d3d;
+            --text-light: #ffffff;
             --bg-grey: #f8f9fa;
         }
 
-        /* --- GLOBAL STYLES --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            background-color: var(--text-light);
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-grey); color: var(--text-dark); }
 
-        /* --- UTILITIES --- */
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .text-center { text-align: center; }
-        .highlight { color: var(--electric-cyan); }
-
-        /* --- HERO SECTION (Fintech Style) --- */
-        header {
-            background-color: var(--deep-navy);
-            color: var(--text-light);
-            padding: 80px 0 100px;
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        .cta-button {
-            background-color: var(--electric-cyan);
-            color: var(--pure-black);
-            padding: 15px 35px;
-            font-weight: 700;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 170, 227, 0.3);
-            background-color: #00bfff;
-        }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 40px; }
+        
+        /* MAIN GRID */
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; position: relative; z-index: 10; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
-        /* --- INFO CARDS (The Stack) --- */
-        .section-title {
-            color: var(--primary-blue);
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: 700;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        .card {
+        /* CARDS */
+        .service-card {
             background: white;
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-blue);
-            transition: transform 0.3s;
-        }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--primary-blue); margin-bottom: 15px; }
-        .card ul { list-style: none; }
-        .card li { margin-bottom: 10px; font-size: 0.95rem; }
-        .card li::before { content: "🔹"; margin-right: 8px; color: var(--electric-cyan); }
-
-        /* --- ROADMAP (Timeline) --- */
-        .roadmap-section { background-color: var(--bg-grey); padding: 80px 0; }
-        .phase {
-            background: white;
-            margin-bottom: 20px;
-            padding: 25px;
-            border-left: 5px solid var(--electric-cyan);
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .phase-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .phase-title { font-weight: 800; color: var(--deep-navy); font-size: 1.2rem; }
-        .phase-tag { background: var(--deep-navy); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
-
-        /* --- SECURITY --- */
-        .security-banner {
-            background-color: var(--deep-navy);
-            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--primary-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .security-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+        .service-card:hover { transform: translateY(-10px); }
+        
+        .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .service-card h3 { color: var(--primary-blue); font-size: 1.5rem; margin-bottom: 15px; }
+        .service-card p { color: #666; margin-bottom: 30px; line-height: 1.5; }
 
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--pure-black);
-            color: #666;
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
+        /* BUTTONS */
+        .btn {
+            padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block;
         }
+        .btn-primary { background-color: var(--primary-blue); color: white; }
+        .btn-primary:hover { background-color: var(--deep-navy); }
+        
+        .btn-accent { background-color: var(--electric-cyan); color: var(--deep-navy); }
+        .btn-accent:hover { background-color: #00bfff; }
+
+        .btn-outline { border: 2px solid var(--primary-blue); color: var(--primary-blue); }
+        .btn-outline:hover { background-color: var(--primary-blue); color: white; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 50px 20px; color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <header class="text-center">
-        <div class="container">
-            <div style="font-weight: 800; letter-spacing: 2px; margin-bottom: 20px; opacity: 0.7;">WELLING INSIGHTS</div>
-            <h1>Technical Project Manager <span class="highlight">Internship</span></h1>
-            <p class="subtitle">Bridge the gap between Construction, Cyber Security, & Tech. <br> A 4-week sprint to break the $100k salary barrier.</p>
-            <a href="https://forms.gle/o4e8tRdBPdVsjeZC9" class="cta-button">Apply Now 🚀</a>
-            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">🔒 Secure Application via Google Workspace</p>
-        </div>
-    </header>
+    <section class="hero">
+        <h1>WELLING INSIGHTS</h1>
+        <p>Advanced Project Management Solutions bridging Construction, Cyber Security, and Technology.</p>
+    </section>
 
-    <section class="container" style="margin-top: -50px; position: relative; z-index: 10;">
+    <div class="container">
         <div class="grid">
-            <div class="card">
-                <h3>🛠 The Tech Stack</h3>
-                <ul>
-                    <li>Jira / Trello (Agile)</li>
-                    <li>Zapier (Automation)</li>
-                    <li>GitHub (Documentation)</li>
-                    <li>Excel / Tableau (Data)</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>🧠 The Strategy</h3>
-                <ul>
-                    <li>Risk Management</li>
-                    <li>Stakeholder Ops</li>
-                    <li>Cyber-Physical Security</li>
-                    <li>Crisis Simulation</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>💼 The Goal</h3>
-                <ul>
-                    <li>Resume Audit</li>
-                    <li>Real Portfolio Projects</li>
-                    <li>Industry Networking</li>
-                    <li>Job Placement Strategy</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="roadmap-section">
-        <div class="container">
-            <h2 class="section-title">The 4-Week Sprint 📅</h2>
             
-            <div class="phase">
-                <div class="phase-header">
-                    <span class="phase-title">Phase 1: The Foundation</span>
-                    <span class="phase-tag">Week 1</span>
+            <div class="service-card" style="border-top-color: var(--electric-cyan);">
+                <div>
+                    <span class="icon">🚀</span>
+                    <h3>TPM Mentorship</h3>
+                    <p>Our flagship 4-week internship program designed to help you break into Technical Project Management and cross the $100k mark.</p>
                 </div>
-                <p>Learn to frame projects technically. <strong>Deliverable:</strong> Project Charter & Scope Statement.</p>
+                <a href="internship.html" class="btn btn-accent">View Program Details →</a>
             </div>
 
-            <div class="phase">
-                <div class="phase-header">
-                    <span class="phase-title">Phase 2: Planning & Architecture</span>
-                    <span class="phase-tag">Week 2</span>
+            <div class="service-card">
+                <div>
+                    <span class="icon">💼</span>
+                    <h3>Corporate Services</h3>
+                    <p>Expert consulting for construction firms needing digital transformation and cyber-physical security audits.</p>
                 </div>
-                <p>Turn scope into a schedule. <strong>Deliverable:</strong> WBS (Work Breakdown Structure) & Gantt Chart.</p>
+                <a href="mailto:your-email@example.com" class="btn btn-primary">Book Discovery Call</a>
             </div>
 
-            <div class="phase">
-                <div class="phase-header">
-                    <span class="phase-title">Phase 3: Risk & Cyber Security</span>
-                    <span class="phase-tag">Week 3</span>
+            <div class="service-card">
+                <div>
+                    <span class="icon">📰</span>
+                    <h3>Industry Insights</h3>
+                    <p>Deep dives into ConTech trends, Risk Management strategies, and the future of Project Management.</p>
                 </div>
-                <p>The Welling Insights Special. <strong>Deliverable:</strong> Site Security Audit & RAID Log.</p>
+                <a href="#" class="btn btn-outline">Read the Blog</a>
             </div>
 
-            <div class="phase">
-                <div class="phase-header">
-                    <span class="phase-title">Phase 4: Execution & Career Ops</span>
-                    <span class="phase-tag">Week 4</span>
-                </div>
-                <p>Get hired. <strong>Deliverable:</strong> Crisis Management Simulation + Resume Audit.</p>
-            </div>
-
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" class="cta-button">Start Your Application</a>
-            </div>
         </div>
-    </section>
-
-    <section class="security-banner">
-        <div class="container">
-            <span class="security-icon">🔒</span>
-            <h3>Bank-Grade Security Standard</h3>
-            <p style="max-width: 600px; margin: 10px auto;">
-                We utilize a decoupled architecture. This public site is static and hosted securely on GitHub. 
-                All applicant data is processed via SOC 2 Compliant Google Workspace forms.
-            </p>
-        </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>© 2025 Welling Insights. All Rights Reserved.</p>
-            <p style="opacity: 0.5; margin-top: 10px;">Mentorship Program | Construction Tech | Cyber Security</p>
-        </div>
+        <p>© 2025 Welling Insights. All Rights Reserved.</p>
     </footer>
 
 </body>
