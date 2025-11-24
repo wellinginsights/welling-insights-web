@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Consultation | Welling Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #044973;
+            --deep-navy: #032130;
+            --electric-cyan: #00aae3;
+            --text-dark: #3d3d3d;
+            --text-light: #ffffff;
+            --bg-grey: #f8f9fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: var(--bg-grey); }
+        
+        nav { background: var(--deep-navy); padding: 20px; text-align: center; }
+        nav a { color: white; text-decoration: none; font-weight: 700; letter-spacing: 1px; }
+
+        header { background-color: var(--primary-blue); color: white; padding: 80px 20px; text-align: center; }
+        h1 { font-size: 2.5rem; margin-bottom: 15px; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* TRIAGE GRID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: -50px; }
+        
+        .booking-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 6px solid var(--primary-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        /* Distinct Styles for the Cards */
+        .pm-card { border-top-color: var(--electric-cyan); }
+        .consult-card { border-top-color: var(--deep-navy); }
+
+        .icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
+        h3 { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 15px; }
+        p { color: #666; margin-bottom: 20px; }
+        
+        .tag-container { margin-bottom: 30px; }
+        .tag { 
+            display: inline-block; background: #eef2f6; color: var(--deep-navy); 
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 3px;
+        }
+
+        .btn {
+            padding: 15px 30px; border-radius: 6px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; width: 100%;
+        }
+        .btn-pm { background-color: var(--electric-cyan); color: var(--deep-navy); }
+        .btn-pm:hover { background-color: #00bfff; }
+        
+        .btn-consult { background-color: var(--deep-navy); color: white; }
+        .btn-consult:hover { opacity: 0.9; }
+
+        footer { background: var(--deep-navy); color: #888; text-align: center; padding: 30px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← BACK TO MAIN SITE</a>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Select Your Service</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Please choose the consulting track that best fits your needs so we can prepare the right resources for our call.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <div class="booking-card pm-card">
+                <div>
+                    <span class="icon">🏗️</span>
+                    <h3>Project Management</h3>
+                    <p>Strategic oversight for complex builds and implementations.</p>
+                    <div class="tag-container">
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">Construction</span>
+                        <span class="tag">Cybersecurity</span>
+                        <span class="tag">Technology</span>
+                    </div>
+                </div>
+                <a href="https://calendar.app.google/NyyXWW1q67MxfTL78" target="_blank" class="btn btn-pm">Book PM Discovery Call</a>
+            </div>
+
+            <div class="booking-card consult-card">
+                <div>
+                    <span class="icon">🛡️</span>
+                    <h3>Tech Consulting</h3>
+                    <p> Specialized services for compliance, security, and documentation.</p>
+                    <div class="tag-container">
+                        <span class="tag">White Hat Hacking</span>
+                        <span class="tag">Compliance Docs</span>
+                        <span class="tag">Privacy & Terms</span>
+                        <span class="tag">Vendor Contracts</span>
+                    </div>
+                </div>
+                <a href="https://calendar.app.google/NyyXWW1q67MxfTL78" target="_blank" class="btn btn-consult">Book Tech Consulting</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Welling Insights. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
