@@ -35,28 +35,22 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
         
         /* SECTION HEADERS */
-        .section-header { text-align: center; margin-bottom: 40px; margin-top: 20px; }
+        .section-header { text-align: center; margin-bottom: 30px; margin-top: 50px; }
         .section-header h2 { font-size: 2rem; color: var(--deep-navy); }
-        .section-header p { color: #666; }
+        .section-header p { color: #666; max-width: 600px; margin: 0 auto; }
 
-        /* CARDS */
-        .card { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid var(--electric-cyan); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary-blue); margin-bottom: 10px; }
-        
-        /* INTERNSHIP BOX (Dark Navy) */
-        .internship-box {
-            background: var(--deep-navy);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin: 50px 0;
-            position: relative;
-            overflow: hidden;
+        /* CARDS (Used for both Tracks now) */
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            margin-bottom: 20px; 
+            border-left: 5px solid var(--electric-cyan); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
         }
-        .internship-box h2 { color: var(--electric-cyan); margin-bottom: 20px; }
-        .internship-box ul { list-style: none; margin-top: 20px; }
-        .internship-box li { margin-bottom: 15px; display: flex; align-items: start; }
-        .internship-box li::before { content: "✅"; margin-right: 15px; }
+        .card h3 { color: var(--primary-blue); margin-bottom: 15px; }
+        .card ul { margin-left: 20px; margin-top: 10px; }
+        .card li { margin-bottom: 10px; }
 
         /* FOOTER */
         footer { background: var(--deep-navy); color: #888; text-align: center; padding: 30px; margin-top: 50px; }
@@ -78,9 +72,14 @@
 
     <div class="container">
         
-        <div class="internship-box">
+        <div class="section-header">
             <h2>Track 1: The Technical Internship</h2>
-            <p><strong>Duration: 3 Months (90 Days)</strong><br>You will act as a Junior TPM on active accounts, working directly under me on live client projects.</p>
+            <p>Real-world execution on live client accounts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Duration: 3 Months (90 Days)</h3>
+            <p>You will act as a Junior TPM on active accounts, working directly under me on live client projects.</p>
             <ul>
                 <li><strong>Real Client Exposure:</strong> Shadow meetings and handle documentation for clients in <strong>Healthcare</strong> (HIPAA/Compliance) and <strong>Construction</strong> (Site Logistics).</li>
                 <li><strong>The "Homework" is Real Work:</strong> You won't be doing busy work. You will be updating schedules, auditing real risk logs, and drafting stakeholder communications.</li>
