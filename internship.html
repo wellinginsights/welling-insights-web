@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship Program | Welling Insights</title>
+    <title>3-Month Residency | Welling Insights</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -22,19 +22,42 @@
         nav a { color: white; text-decoration: none; font-weight: 700; letter-spacing: 1px; }
 
         /* HERO */
-        header { background-color: var(--primary-blue); color: white; padding: 60px 20px; text-align: center; }
+        header { background-color: var(--primary-blue); color: white; padding: 80px 20px; text-align: center; }
         h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        
         .cta-button {
             background-color: var(--electric-cyan); color: black; padding: 15px 35px; 
             font-weight: 700; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 20px;
         }
         .cta-button:hover { background-color: #00bfff; transform: translateY(-2px); }
 
-        /* SECTIONS */
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .card { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid var(--electric-cyan); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        h2 { color: var(--deep-navy); margin-bottom: 10px; }
+        /* LAYOUT */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
         
+        /* SECTION HEADERS */
+        .section-header { text-align: center; margin-bottom: 40px; margin-top: 20px; }
+        .section-header h2 { font-size: 2rem; color: var(--deep-navy); }
+        .section-header p { color: #666; }
+
+        /* CARDS */
+        .card { background: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid var(--electric-cyan); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary-blue); margin-bottom: 10px; }
+        
+        /* INTERNSHIP BOX (Dark Navy) */
+        .internship-box {
+            background: var(--deep-navy);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .internship-box h2 { color: var(--electric-cyan); margin-bottom: 20px; }
+        .internship-box ul { list-style: none; margin-top: 20px; }
+        .internship-box li { margin-bottom: 15px; display: flex; align-items: start; }
+        .internship-box li::before { content: "✅"; margin-right: 15px; }
+
         /* FOOTER */
         footer { background: var(--deep-navy); color: #888; text-align: center; padding: 30px; margin-top: 50px; }
     </style>
@@ -47,33 +70,53 @@
 
     <header>
         <div class="container">
-            <h1>Technical Project Manager Mentorship</h1>
-            <p style="max-width: 700px; margin: 0 auto;">A 4-week technical sprint leveraging experience in Construction, Healthcare, and Cyber Security.</p>
-            <a href="https://forms.gle/FEnamiYffLfru6G9A" class="cta-button">Apply Now 🚀</a>
+            <h1>The Welling Dual-Track Residency</h1>
+            <p style="max-width: 700px; margin: 0 auto;">A comprehensive <strong>3-Month Career Accelerator</strong> combining Educational Mentorship with a hands-on Technical Internship.</p>
+            <a href="https://forms.gle/FEnamiYffLfru6G9A" class="cta-button">Apply for Residency (3 Months) 🚀</a>
         </div>
     </header>
 
     <div class="container">
-        <div class="card">
-            <h2>📅 Week 1: The Foundation</h2>
-            <p>Learn to frame projects technically. <strong>Deliverable:</strong> Project Charter & Scope Statement (Construction/MedTech scenarios).</p>
+        
+        <div class="internship-box">
+            <h2>Track 1: The Technical Internship</h2>
+            <p><strong>Duration: 3 Months (90 Days)</strong><br>You will act as a Junior TPM on active accounts, working directly under me on live client projects.</p>
+            <ul>
+                <li><strong>Real Client Exposure:</strong> Shadow meetings and handle documentation for clients in <strong>Healthcare</strong> (HIPAA/Compliance) and <strong>Construction</strong> (Site Logistics).</li>
+                <li><strong>The "Homework" is Real Work:</strong> You won't be doing busy work. You will be updating schedules, auditing real risk logs, and drafting stakeholder communications.</li>
+                <li><strong>Commitment:</strong> This is not a sprint. This is a quarterly commitment designed to give you a complete project cycle experience.</li>
+            </ul>
         </div>
-        <div class="card">
-            <h2>📅 Week 2: Planning & Architecture</h2>
-            <p>Turn scope into a schedule. <strong>Deliverable:</strong> WBS & Gantt Chart.</p>
+
+        <div class="section-header">
+            <h2>Track 2: The Mentorship Roadmap</h2>
+            <p>Concurrent with your internship work, you will undergo 90 days of strategic training.</p>
         </div>
+
         <div class="card">
-            <h2>📅 Week 3: Risk, Safety & Security</h2>
-            <p>The Welling Insights Special. <strong>Deliverable:</strong> Site Security Audit (Physical/Cyber) & Compliance Check (OSHA/HIPAA).</p>
+            <h3>📅 Month 1: Foundation & Compliance</h3>
+            <p><strong>Focus:</strong> Understanding the High-Compliance Environment.</p>
+            <p><strong>Curriculum:</strong> Project Chartering, Scope Definition, and Introduction to HIPAA (Healthcare) & OSHA (Construction) frameworks.</p>
+            <p><strong>Deliverable:</strong> A full Project Management Plan (PMP) for a theoretical client.</p>
         </div>
+
         <div class="card">
-            <h2>📅 Week 4: Execution & Career Ops</h2>
-            <p>Get hired. <strong>Deliverable:</strong> Crisis Simulation + Resume Audit.</p>
+            <h3>📅 Month 2: Execution & Security</h3>
+            <p><strong>Focus:</strong> Managing the Build & The Risk.</p>
+            <p><strong>Curriculum:</strong> Advanced Scheduling (Critical Path), WBS Construction, and <strong>Cyber-Physical Security Audits</strong>.</p>
+            <p><strong>Deliverable:</strong> A Site Security Risk Assessment & RAID Log.</p>
+        </div>
+
+        <div class="card">
+            <h3>📅 Month 3: Delivery & Career Strategy</h3>
+            <p><strong>Focus:</strong> Landing the $100k+ Role.</p>
+            <p><strong>Curriculum:</strong> Crisis Management Simulation, Stakeholder Negotiation, and Resume/LinkedIn Technical Audit.</p>
+            <p><strong>Deliverable:</strong> Final Portfolio Presentation & Mock Interview.</p>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-            <h3>Ready to start?</h3>
-            <a href="https://forms.gle/FEnamiYffLfru6G9A" class="cta-button">Fill Out Application Form</a>
+            <h3>Ready to commit to your career?</h3>
+            <a href="https://forms.gle/FEnamiYffLfru6G9A" class="cta-button">Submit Unified Application</a>
             <p style="margin-top: 15px; font-size: 0.9rem;">🔒 Secure Link via Google Workspace</p>
         </div>
     </div>
