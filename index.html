@@ -19,11 +19,31 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-grey); color: var(--text-dark); }
 
+        /* TOP NAV BAR */
+        nav {
+            background-color: var(--deep-navy);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end; /* Pushes button to the right */
+            align-items: center;
+        }
+        .login-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+        .login-link:hover { color: var(--electric-cyan); }
+        .login-icon { margin-right: 8px; font-size: 1rem; }
+
         /* HERO SECTION */
         .hero {
             background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
             color: white;
-            padding: 100px 20px;
+            padding: 80px 20px 100px; /* Adjusted padding since we added the nav bar */
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
@@ -71,6 +91,12 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="https://welling-insights.moxieapp.com/login" target="_blank" class="login-link">
+            <span class="login-icon">🔒</span> Client Login
+        </a>
+    </nav>
 
     <section class="hero">
         <h1>WELLING INSIGHTS</h1>
