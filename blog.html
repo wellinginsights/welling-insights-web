@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industry Insights | Welling Blog</title>
+    <meta name="description" content="Expert insights on Technical Project Management, Construction Tech, and Cyber Security compliance from Welling Insights.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -17,36 +19,76 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: var(--bg-grey); }
         
-        /* NAV */
-        nav { background: var(--deep-navy); padding: 20px; text-align: center; }
-        nav a { color: white; text-decoration: none; font-weight: 700; letter-spacing: 1px; font-size: 0.9rem; }
-        nav a:hover { color: var(--electric-cyan); }
-
-        /* HERO */
-        header { background-color: var(--primary-blue); color: white; padding: 60px 20px; text-align: center; }
+        /* NAV BAR (Matches Home Page) */
+        nav { 
+            background: var(--deep-navy); 
+            padding: 15px 20px; 
+            display: flex; 
+            justify-content: space-between; /* Pushes items to edges */
+            align-items: center; 
+        }
+        .nav-link { color: white; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; }
+        .nav-link:hover { color: var(--electric-cyan); }
+        
+        /* HERO (Matches Home Page Gradient) */
+        header { 
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
+            color: white; 
+            padding: 80px 20px 100px; 
+            text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
         h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; }
 
         /* BLOG CONTAINER */
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 1200px; margin: -50px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
+        
         .blog-wrapper {
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            min-height: 600px; /* Prevents collapse while Elfsight loads */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            min-height: 600px;
+            border-top: 5px solid var(--electric-cyan); /* Branding accent */
         }
         
+        /* CALL TO ACTION SECTION */
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .btn-cta {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .btn-cta:hover { background-color: var(--deep-navy); }
+
         footer { background: var(--deep-navy); color: #888; text-align: center; padding: 30px; margin-top: 50px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">← BACK TO MAIN SITE</a>
+        <a href="index.html" class="nav-link">← Back to Site</a>
+        <a href="https://welling-insights.moxieapp.com/login" target="_blank" class="nav-link">
+            <span style="margin-right: 8px;">🔒</span> Client Login
+        </a>
     </nav>
 
     <header>
-        <div class="container">
+        <div class="container" style="margin: 0 auto;">
             <h1>Welling Insights Blog</h1>
             <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">Deep dives into ConTech trends, Cyber Security protocols, and Healthcare Project Management.</p>
         </div>
@@ -54,10 +96,17 @@
 
     <div class="container">
         <div class="blog-wrapper">
+            <p style="text-align: center; color: #ccc; padding-top: 50px;">Loading Articles...</p>
             
             <script src="https://elfsightcdn.com/platform.js" async></script>
             <div class="elfsight-app-667559f7-aa60-4044-9985-1e6e9c5d1ffd" data-elfsight-app-lazy></div>
-            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Need help implementing these strategies?</h3>
+        <p style="color: #666;">Whether you need a Corporate Consultation or want to join our Residency program.</p>
+        <a href="booking.html" class="btn-cta">Book a Discovery Call</a>
     </div>
 
     <footer>
