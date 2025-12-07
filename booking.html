@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Consultation | Welling Insights</title>
+    <title>Select Service | Welling Insights</title>
+    <meta name="description" content="Book a discovery call for Technical Project Management or specialized Tech Consulting services.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -17,27 +19,49 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: var(--bg-grey); }
         
-        nav { background: var(--deep-navy); padding: 20px; text-align: center; }
-        nav a { color: white; text-decoration: none; font-weight: 700; letter-spacing: 1px; }
+        /* NAV BAR */
+        nav { 
+            background: var(--deep-navy); 
+            padding: 15px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .nav-link { color: white; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; }
+        .nav-link:hover { color: var(--electric-cyan); }
 
-        header { background-color: var(--primary-blue); color: white; padding: 80px 20px; text-align: center; }
-        h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        /* HERO SECTION */
+        header { 
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
+            color: white; 
+            padding: 80px 20px 100px; 
+            text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 10; }
         
         /* TRIAGE GRID */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: -50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: -60px; }
         
         .booking-card {
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             text-align: center;
             border-top: 6px solid var(--primary-blue);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Hover Effect for Professional Feel */
+        .booking-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
         
         /* Distinct Styles for the Cards */
@@ -63,19 +87,28 @@
         .btn-consult { background-color: var(--deep-navy); color: white; }
         .btn-consult:hover { opacity: 0.9; }
 
-        footer { background: var(--deep-navy); color: #888; text-align: center; padding: 30px; margin-top: 50px; }
+        footer { background: var(--deep-navy); color: #888; text-align: center; padding: 30px; margin-top: 50px; font-size: 0.9rem; }
+
+        /* Mobile Fixes */
+        @media (max-width: 768px) {
+            header { clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); padding-bottom: 60px; }
+            .grid { margin-top: -30px; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">← BACK TO MAIN SITE</a>
+        <a href="index.html" class="nav-link">← Back to Site</a>
+        <a href="https://welling-insights.moxieapp.com/login" target="_blank" class="nav-link">
+            <span style="margin-right: 8px;">🔒</span> Client Login
+        </a>
     </nav>
 
     <header>
-        <div class="container">
+        <div class="container" style="margin: 0 auto;">
             <h1>Select Your Service</h1>
-            <p style="max-width: 600px; margin: 0 auto;">Please choose the consulting track that best fits your needs so we can prepare the right resources for our call.</p>
+            <p style="max-width: 600px; margin: 0 auto; opacity: 0.9;">Please choose the consulting track that best fits your needs so we can prepare the right resources for our call.</p>
         </div>
     </header>
 
