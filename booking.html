@@ -6,7 +6,7 @@
     <title>Select Service | Welling Insights</title>
     <meta name="description" content="Book a discovery call for Technical Project Management or specialized Tech Consulting services.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-blue: #044973;
@@ -40,6 +40,16 @@
         }
         h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; }
 
+        /* SPECIFIC STYLE FOR THE SUBTITLE TEXT */
+        .header-text {
+            max-width: 600px; 
+            margin: 0 auto; 
+            color: #ffffff; /* PURE WHITE */
+            opacity: 1; /* NO TRANSPARENCY */
+            font-weight: 500; /* SLIGHTLY BOLDER FOR READABILITY */
+            font-size: 1.1rem;
+        }
+
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 10; }
         
         /* TRIAGE GRID */
@@ -58,7 +68,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        /* Hover Effect for Professional Feel */
         .booking-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
@@ -108,7 +117,7 @@
     <header>
         <div class="container" style="margin: 0 auto;">
             <h1>Select Your Service</h1>
-            <p style="max-width: 600px; margin: 0 auto; opacity: 0.9;">Please choose the consulting track that best fits your needs so we can prepare the right resources for our call.</p>
+            <p class="header-text">Please choose the consulting track that best fits your needs so we can prepare the right resources for our call.</p>
         </div>
     </header>
 
